@@ -5,4 +5,5 @@ export default {
     skipJavascript: false,
     dynamicSampling: false,
   },
+  routerPrefix: "/recipe-a11y",
 };

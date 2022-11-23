@@ -6858,7 +6858,7 @@ function extractChangingRecords(to, from) {
 }
 const scriptRel = "modulepreload";
 const seen = {};
-const base = "/";
+const base = "/recipe-a11y/";
 const __vitePreload = function preload(baseModule, deps) {
   if (!deps || deps.length === 0) {
     return baseModule();
@@ -55413,7 +55413,7 @@ var windiComponents = "";
 var windiUtilities = "";
 const app = createApp(App);
 const router = createRouter({
-  history: createWebHistory("/"),
+  history: createWebHistory("/recipe-a11y/"),
   routes
 });
 app.use(router);
