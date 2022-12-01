@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-<head>
-  <style>button[disabled] {
-  opacity: 0.5;
-  cursor: not-allowed;
-}</style>
 
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/recipe-a11y/assets/logo.svg" type="image/svg+xml" media="(prefers-color-scheme:no-preference)">
-  <link rel="icon" href="/recipe-a11y/assets/logo-dark.svg" type="image/svg+xml" media="(prefers-color-scheme:dark)">
-  <link rel="icon" href="/recipe-a11y/assets/logo-light.svg" type="image/svg+xml" media="(prefers-color-scheme:light)">
+  <title>Recipe a11y</title>
+  <style>
+    body {
+      margin: 0 !important;
+      padding: 0;
+    }
 
+    .content {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #bfdbfe;
+      background-color: #151c23;
+      font-family: "DM Sans";
+    }
+
+    .header {
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+
+    .link {
+      background-color: #bfdbfe;
+      border-radius: 8px;
+      padding: 10px;
+      
+    }
+
+    .nav {
+      text-decoration: none;
+      color: #151c23;
+    }
+
+    .external {
+      text-decoration: none;
+      color: #bfdbfe;
+    }
+  </style>
   <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=DM+Serif+Display:ital@0;1&display=swap">
-  <title>Unlighthouse</title>
-  <script data-unlighthouse-inline>window.__unlighthouse_static = true</script>
-  <script data-unlighthouse-payload src="/recipe-a11y/assets/payload.js"></script>
-  <style>:root {
-  --c-bg: #fff;
-  --c-scrollbar: #eee;
-  --c-scrollbar-hover: #bbb;
-}
-html.dark {
-  --c-bg: #050505;
-  --c-scrollbar: #111;
-  --c-scrollbar-hover: #222;
-}
-* {
-  scrollbar-color: var(--c-scrollbar) var(--c-bg);
-}
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar:horizontal {
-  height: 6px;
-}
-::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
-  background: var(--c-bg);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--c-scrollbar);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--c-scrollbar-hover);
-}</style>
-  <script type="module" crossorigin src="/recipe-a11y/assets/index.e6c026fe.js"></script>
-  <link rel="stylesheet" href="/recipe-a11y/assets/index.c9b7ec36.css">
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=DM+Serif+Display:ital@0;1&display=swap">
 </head>
-<body class="dark:bg-teal-900">
-<div id="app"></div>
-<script>
-(function () {
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-  const setting = localStorage.getItem('color-schema') || 'auto'
-  if (setting === 'dark' || (prefersDark && setting !== 'light'))
-    document.documentElement.classList.toggle('dark', true)
 
-  // document.title = __unlighthouse_data.options.host.replace(/https?:\/\/(www.)?/, '') + ' | Unlighthouse'
-})()
-</script>
-
+<body>
+  <div class="content">
+    <div>
+      <h1 class="header">Recipe a11y</h1>
+    </div>
+    <div>
+      <h2 class="header">
+        ezCater <a class="external" href="https://ezcater.github.io/recipe/" target="_blank">Recipe</a> <a class="external"
+        href="https://github.com/GoogleChrome/lighthouse" target="_blank">lighthouse</a> reports with <a class="external"
+        href="https://unlighthouse.dev/" target="_blank">unlighthouse</a>
+      </h2>
+    </div>
+    <div>
+      <span class="link"><a class="nav" href="./web/" target="_blank">Web</a></span>
+      <span class="link"><a class="nav" href="./mobile/" target="_blank">Mobile</a></span>
+    </div>
+  </div>
 </body>
+
 </html>
